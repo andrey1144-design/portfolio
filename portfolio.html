@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Портфолио дизайнера</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:ital,wght@0,300;1,300&display=swap">
+<style>
+:root{--u:min(5.6px,.92vw);--bg:#f5ecc2;--fg:#819238;box-sizing:border-box}
+:root.inv{--bg:#819238;--fg:#f5ecc2}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 13px/1.3 Unbounded,"Arial Black",sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:calc(76px + env(safe-area-inset-bottom,0px));transition:background .45s ease,color .45s ease}
+.stage{animation:in 1s ease backwards;min-height:calc(67px + env(safe-area-inset-bottom,0px));position:fixed;left:0;right:0;top:0;bottom:calc(68px + env(safe-area-inset-bottom,0px));perspective:900px;perspective-origin:50% 18%;overflow:hidden}
+.stage::after{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:var(--bg);-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent);pointer-events:none;transition:background-color .45s ease}
+.sc{position:absolute;left:50%;top:40%;width:0;height:0;transform-style:preserve-3d}
+.wrap{position:absolute;left:calc(var(--u)*-50);top:0;width:calc(var(--u)*100);height:calc(var(--u)*462.5);transform-style:preserve-3d;transform-origin:50% 0;transform:rotateX(62deg)}
+.drv{height:700vh}
+@keyframes in{from{opacity:0}to{opacity:1}}#pw{transition:opacity .3s ease}
+.hint path{fill:var(--fg);transition:fill .45s ease}.hint{position:fixed;left:50%;bottom:calc(68px + env(safe-area-inset-bottom,0px) + 18px);width:64px;height:96px;margin-left:-32px;image-rendering:pixelated;pointer-events:none;z-index:3;animation:bob 1.9s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes bob{0%,100%{transform:translateY(-6px)}50%{transform:translateY(8px)}}
+.me{position:absolute;left:0;top:0;width:calc(var(--u)*10);height:calc(var(--u)*20);margin:calc(var(--u)*-20) 0 0 calc(var(--u)*-5);transform-origin:50% 100%;pointer-events:none}
+.me svg{width:100%;height:100%;display:block;overflow:visible;filter:blur(.6px)}.me svg *{fill:var(--fg);transition:fill .45s ease}
+.px{transition:opacity .3s ease;position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.p{fill:none;stroke:var(--fg);shape-rendering:crispEdges}
+.l{position:absolute;transform:rotateX(-62deg);transform-origin:50% 100%;margin:0;font-weight:700;font-size:calc(var(--u)*6);line-height:1.1}
+.l small{display:block;font-weight:400;font-size:calc(var(--u)*3.2);margin-top:calc(var(--u)*1.2)}
+.l.r{text-align:right}
+a.l{color:inherit;text-decoration:none}
+a.l b{background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;padding-bottom:2px;transition:background-size .5s cubic-bezier(.22,1,.36,1)}a.l:hover b,a.l:focus-visible b{background-size:100% 2px}a.l{outline:0;transition:transform .5s cubic-bezier(.22,1,.36,1)}a.l:hover{transform:rotateX(-62deg) translateX(4px)}a.l.r:hover{transform:rotateX(-62deg) translateX(-4px)}
+.d{position:absolute;fill:none;stroke:var(--fg);stroke-width:1.4}
+.big{font-size:calc(var(--u)*9)}
+.mail{font-size:calc(var(--u)*5)}
+.bar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));background:var(--bg);animation:in 1s ease backwards;border-top:1px solid var(--fg);z-index:5;transition:background .45s ease,border-color .45s ease}
+button{transition:background .35s ease,color .35s ease,transform .3s cubic-bezier(.22,1,.36,1);font:700 11px/1 Unbounded,sans-serif;color:var(--fg);background:none;border:1px solid var(--fg);border-radius:99px;padding:11px 16px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+button:active{transform:scale(.96)}button:hover,button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+button:focus-visible,.logo:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.bar .L{justify-self:start}.bar .R{justify-self:end}
+.logo{border:0;padding:3px;border-radius:8px;transition:background .35s ease,color .35s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.logo:hover{background:none;color:var(--fg)}
+.logo svg{width:30px;height:30px;display:block}.mid{position:relative;display:flex;justify-content:center}.cl{font:italic 300 10px/11px -apple-system,"SF Pro Display",BlinkMacSystemFont,Inter,sans-serif;letter-spacing:.02em;position:absolute;left:50%;top:100%;margin-top:-5px;white-space:nowrap;color:var(--fg);opacity:0;transform:translate(-50%,-4px);transition:opacity .6s ease,transform .7s cubic-bezier(.22,1,.36,1)}.bar.po .cl{opacity:1;transform:translate(-50%,0)}.bar.po .logo{transform:translateY(-9px)}
+button svg{width:12px;height:12px}
+.gal{position:fixed;inset:0;bottom:calc(68px + env(safe-area-inset-bottom,0px));background:var(--bg);overflow:auto;padding:calc(24px + env(safe-area-inset-top,0px)) 16px 24px;z-index:4;overscroll-behavior:contain;visibility:hidden;opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .6s cubic-bezier(.22,1,.36,1),visibility 0s .6s}
+.gal.on{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+.w{max-width:1000px;margin:0 auto}.gal h2{font:700 clamp(40px,9vw,96px)/1 Unbounded,sans-serif;margin:0 0 8px}.cp{margin:0 0 24px}.gal p{font-size:12px;line-height:1.7;max-width:640px;margin:0 0 14px}.rw{display:grid;grid-template-columns:130px 1fr;border-top:1px solid var(--fg);padding:11px 0;font-size:12px;max-width:640px}.rw:last-of-type{margin-bottom:26px}
+.g{margin-top:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px 14px;}
+.g canvas{transition:transform .5s cubic-bezier(.22,1,.36,1);display:block;width:100%;aspect-ratio:4/5;border:1px solid var(--fg);image-rendering:pixelated;margin-bottom:6px}
+.g div:hover canvas{transform:translateY(-4px)}.g span{font-size:11px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="clv" viewBox="0 0 40 40"><circle cx="13" cy="13" r="9"/><circle cx="27" cy="13" r="9"/><circle cx="13" cy="27" r="9"/><circle cx="27" cy="27" r="9"/></symbol>
+<symbol id="spk" viewBox="0 0 24 24"><path d="M12 1Q13.5 10.5 23 12Q13.5 13.5 12 23Q10.5 13.5 1 12Q10.5 10.5 12 1Z"/></symbol>
+<symbol id="pap" viewBox="0 0 40 40"><rect x="6" y="6" width="14" height="16" transform="rotate(-14 13 14)"/><rect x="18" y="18" width="14" height="16" transform="rotate(12 25 26)"/></symbol>
+<symbol id="lg" viewBox="80 80 215 215"><g fill="none" stroke="currentColor" stroke-linecap="butt"><ellipse cx="140" cy="188" rx="43" ry="92" stroke-width="15"/><ellipse cx="149" cy="188" rx="26" ry="64" stroke-width="13"/><ellipse cx="235" cy="188" rx="43" ry="92" stroke-width="15"/><ellipse cx="226" cy="188" rx="26" ry="64" stroke-width="13"/></g></symbol>
+</defs></svg>
+
+<div class="stage"><div class="sc"><main class="wrap" id="top">
+<canvas class="px" id="px"></canvas><svg width="0" height="0" style="position:absolute" aria-hidden="true"><path id="gp" d="M300 0C300 150 120 150 120 300S300 450 300 600 120 750 120 900 300 1050 300 1200 120 1350 120 1500 300 1650 300 1850"/></svg>
+<a class="l big" href="#" data-k="me" style="left:8%;top:2.4%"><b>дизайнер</b><small>(Андрей) · о себе</small></a>
+<a class="l" href="#" data-k="id" style="left:42%;top:15%"><b>айдентика</b><small>(логотипы, системы)</small></a>
+<a class="l r" href="#" data-k="po" style="right:36%;top:31.5%"><b>постеры</b><small>(печать, типографика)</small></a>
+<a class="l" href="#" data-k="ui" style="left:44%;top:48%"><b>интерфейсы</b><small>(сайты, приложения)</small></a>
+<a class="l r" href="#" data-k="ad" style="right:36%;top:64.5%"><b>арт-дирекшн</b><small>(съёмки, кампании)</small></a>
+<a class="l" href="#" data-k="all" style="left:44%;top:80.5%"><b>галерея</b><small>(смотреть все работы)</small></a>
+<a class="l mail" href="mailto:hello@example.com" style="left:8%;top:94.5%"><b>hello@example.com</b><small>(напишите мне)</small></a>
+<svg class="d" style="left:6%;top:40%;width:calc(var(--u)*9)" viewBox="0 0 40 40"><use href="#clv"/></svg>
+<svg class="d" style="left:80%;top:60%;width:calc(var(--u)*9)" viewBox="0 0 24 24"><use href="#spk"/></svg>
+<svg class="d" style="left:80%;top:22%;width:calc(var(--u)*9)" viewBox="0 0 40 40"><use href="#pap"/></svg>
+<svg class="d" style="left:84%;top:90%;width:calc(var(--u)*9)" viewBox="0 0 40 40"><use href="#clv"/></svg>
+<svg class="d" style="left:10%;top:76%;width:calc(var(--u)*7)" viewBox="0 0 24 24"><use href="#spk"/></svg>
+<div class="me" id="me"><svg viewBox="0 0 100 200" aria-hidden="true"><g id="l2"><path d="M42 100L68 100L70 148L74 178L44 178L47 148Z"/><path d="M42 176L74 176L76 187L30 187Q30 180 42 176Z"/></g><g id="l1"><path d="M42 100L68 100L70 148L74 178L44 178L47 148Z"/><path d="M42 176L74 176L76 187L30 187Q30 180 42 176Z"/></g><path d="M38 46C28 56 26 74 31 88C28 96 33 104 46 104L74 104C78 92 77 62 70 48C62 42 46 41 38 46Z"/><circle cx="52" cy="31" r="12"/><path d="M38 31L24 27L37 23L28 13L42 18L42 5L51 16L57 3L60 16L70 7L68 20L80 19L69 28Z"/><g id="a1"><path d="M44 50L62 50L64 94L58 100L44 98Z"/></g></svg></div>
+</main></div></div><div class="drv"></div>
+
+<section class="gal" id="gal" aria-label="Раздел"><div class="w" id="pw"></div></section>
+
+<svg class="hint" id="hint" viewBox="0 0 64 96" aria-hidden="true" shape-rendering="crispEdges"><path id="hp"/></svg>
+<nav class="bar">
+<button class="L" id="gb" aria-pressed="false">галерея</button>
+<div class="mid"><button class="logo" id="lb" aria-label="На главную"><svg><use href="#lg"/></svg></button><span class="cl" aria-hidden="true">/закрыть\</span></div>
+<button class="R" id="vb" aria-label="Сменить вид сайта">вид <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 1a5 5 0 0 0 0 10z" fill="currentColor"/></svg></button>
+</nav>
+
+<script>
+var lock=null,sy=0,amp=0,R=document.documentElement,bar=document.querySelector('.bar'),gal=document.getElementById('gal'),gb=document.getElementById('gb'),PW=document.getElementById('pw'),cur='';
+function col(n){return getComputedStyle(R).getPropertyValue(n).trim()}
+var T='[Здесь будет ваш текст. ]';
+var D={
+me:{t:'дизайнер',s:'(Андрей)',p:['Привет! Меня зовут Андрей, я графический дизайнер с 4-летним опытом.','Мой профессиональный путь начался с веб-дизайна, но именно создание ярких афиш и плакатов вдохновило меня полностью уйти в графику.','Сейчас я создаю визуальный контент для Российских студенческих отрядов и являюсь участником команды их пресс-центра.','Приглашаю вас ознакомиться с моими работами!'],r:[['Опыт','4 года'],['Инструменты','[Figma, Illustrator, Photoshop...]'],['Город','[ваш город]'],['Почта','hello@example.com']]},
+id:{t:'айдентика',s:'(логотипы, системы)',p:[T+'Опишите, какие айдентики вы делаете и в чём ваш подход.'],n:4},
+po:{t:'постеры',s:'(печать, типографика)',p:[T+'Расскажите о постерах и печатных работах.'],n:6},
+ui:{t:'интерфейсы',s:'(сайты, приложения)',p:[T+'Расскажите о сайтах и приложениях, которые вы проектировали.'],n:4},
+ad:{t:'арт-дирекшн',s:'(съёмки, кампании)',p:[T+'Расскажите о кампаниях и съёмках, где вы отвечали за образ.'],n:4},
+all:{t:'галерея',s:'(все работы)',n:8}};
+function tex(v,s,fg,bg){var c=4,w=Math.ceil(v.clientWidth/c),h=Math.ceil(v.clientHeight/c),x=v.getContext('2d');v.width=w;v.height=h;x.fillStyle=bg;x.fillRect(0,0,w,h);x.fillStyle=fg;
+for(var j=0;j<h;j++)for(var i=0;i<w;i++){var u=i*c*.03,k=j*c*.03,f=Math.sin(u*3+Math.sin(k*2+s)*2)+Math.sin(k*3.4-u*1.6+s*1.7)+Math.sin((u+k)*1.7+s);
+for(var l=-1.6;l<1.7;l+=.8)if(Math.abs(f-l)<.07){x.fillRect(i,j,1,1);break}}}
+function drawTiles(){var f=col('--fg'),b=col('--bg');PW.querySelectorAll('canvas').forEach(function(v,i){if(v.clientWidth)tex(v,i*1.9+1+cur.length,i%2?b:f,i%2?f:b)})}
+function prog(){var mx=document.documentElement.scrollHeight-innerHeight;return mx>0?Math.min(1,Math.max(0,scrollY/mx)):0}
+function open(k){if(!gal.classList.contains('on')){lock=prog();sy=scrollY}var d=D[k],h='<h2>'+d.t+'</h2><p class="cp">'+d.s+'</p>';(d.p||[]).forEach(function(t){h+='<p>'+t+'</p>'});(d.r||[]).forEach(function(r){h+='<div class="rw"><span>'+r[0]+'</span><span>'+r[1]+'</span></div>'});
+if(d.n){h+='<div class="g">';for(var i=1;i<=d.n;i++)h+='<div><canvas></canvas><span>'+d.t+' 0'+i+'</span></div>';h+='</div>'}
+PW.innerHTML=h;cur=k;gal.classList.add('on');bar.classList.add('po');gal.scrollTop=0;gb.setAttribute('aria-pressed',k=='all');drawTiles()}
+function shut(){if(!gal.classList.contains('on'))return;gal.classList.remove('on');bar.classList.remove('po');gb.setAttribute('aria-pressed',false);cur='';if(Math.abs(scrollY-sy)>1)scrollTo({top:sy,behavior:'instant'});lock=null}
+document.querySelectorAll('[data-k]').forEach(function(a){a.onclick=function(e){e.preventDefault();open(a.dataset.k)}});
+gb.onclick=function(){cur=='all'?shut():open('all')};
+document.getElementById('lb').onclick=function(){if(gal.classList.contains('on'))shut();else window.scrollTo({top:0,behavior:'smooth'})};
+addEventListener('keydown',function(e){if(e.key=='Escape')shut()});
+/* pixel path */
+function hint(){var d='';function r(X,Y){d+='M'+Math.round(X/2)*2+' '+Math.round(Y/2)*2+'h2v2h-2z'}for(var y=0;y<70;y+=2)r(32+5*Math.sin(y/13),y);for(var i=0;i<=22;i++){r(32-i,92-i);r(32+i,92-i)}document.getElementById('hp').setAttribute('d',d)}
+function px(){var cv=document.getElementById('px'),w=cv.clientWidth,h=cv.clientHeight;if(!w)return;cv.width=w;cv.height=h;var x=cv.getContext('2d'),sc=w/400,c=2,P=document.getElementById('gp'),len=P.getTotalLength(),seen={};x.fillStyle=col('--fg');
+[0,16].forEach(function(o){for(var l=0;l<len;l+=.5){var p=P.getPointAtLength(l),cx=Math.round((p.x+o)*sc/c),cy=Math.round(p.y*sc/c),k=o+':'+cx+','+cy;if(!seen[k]){seen[k]=1;x.fillRect(cx*c,cy*c,c,c)}}});hint()}
+px();
+document.getElementById('vb').onclick=function(){var c=document.getElementById('px');c.style.opacity=0;PW.style.opacity=0;R.classList.toggle('inv');setTimeout(function(){px();c.style.opacity=1;if(gal.classList.contains('on'))drawTiles();PW.style.opacity=1},320)};
+addEventListener('resize',function(){px();if(gal.classList.contains('on'))drawTiles()});
+
+var wrap=document.getElementById('top'),me=document.getElementById('me'),GP=document.getElementById('gp'),LEN=GP.getTotalLength(),cp=0,ph=0,pl=0,fx=1,last=0,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function near(x,y){var b=0,bd=1e9;for(var l=0;l<LEN;l+=4){var p=GP.getPointAtLength(l),d=Math.abs(p.x-x)+Math.abs(p.y-y);if(d<bd){bd=d;b=l}}return b}
+var S=[[300,40],[120,300],[300,600],[120,900],[300,1200],[120,1500],[300,1790]].map(function(a){return near(a[0],a[1])});
+function sm(t){return t*t*(3-2*t)}
+function lenAt(q){var n=S.length-1,u=Math.min(q,.9999)*n,i=Math.floor(u),f=u-i,w=f<.07?0:f>.93?1:sm((f-.07)/.86);return S[i]+(S[i+1]-S[i])*w}
+var LB=[].slice.call(wrap.querySelectorAll('.l')).map(function(e){return[e,parseFloat(e.style.top)/100]}),sv=function(id){return document.getElementById(id)},l1=sv('l1'),l2=sv('l2'),a1=sv('a1');
+function tick(t){var dt=Math.min(.05,(t-last)/1000||.016);last=t;
+var mx=document.documentElement.scrollHeight-innerHeight,tp=lock!==null?lock:prog();cp=rm?tp:cp+(tp-cp)*(1-Math.exp(-dt*7));if(Math.abs(tp-cp)<.0002)cp=tp;
+var l=lenAt(cp),p=GP.getPointAtLength(l),q=GP.getPointAtLength(Math.min(LEN,l+2)),dl=l-pl,k=wrap.offsetWidth/400,W=wrap.offsetWidth,H=wrap.offsetHeight;
+if(Math.abs(dl)>.0005){ph+=Math.abs(dl)*.11;var dx=(q.x-p.x)*(dl>0?1:-1);if(Math.abs(dx)>.01)fx+=((dx>0?-1:1)-fx)*Math.min(1,dt*9)}pl=l;amp+=(Math.min(1,Math.abs(dl)/dt/45)-amp)*Math.min(1,dt*7);
+var yc=p.y*k,xc=(p.x*k-W/2)*.55;
+wrap.style.transform='rotateX(62deg) translate('+(-xc)+'px,'+(-yc)+'px)';
+var s1=Math.sin(ph)*amp,bob=Math.abs(Math.cos(ph))*W*.012*amp;
+l1.setAttribute('transform','rotate('+(28*s1)+' 54 102)');l2.setAttribute('transform','rotate('+(-28*s1)+' 54 102)');a1.setAttribute('transform','rotate('+(-24*s1)+' 53 52)');
+me.style.transform='translate('+p.x*k+'px,'+(yc-bob)+'px) rotateX(-62deg) scaleX('+fx+')';
+document.getElementById('hint').style.opacity=Math.max(0,1-cp*16);LB.forEach(function(a){var d=(yc/H)-a[1];a[0].style.opacity=d<.02?1:Math.max(.1,1-(d-.02)*5.5)});
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+</script></body></html>
